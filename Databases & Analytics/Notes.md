@@ -80,4 +80,11 @@ The database services could run on EC2 but you must handle yourself the resilien
 #### DynamoDB - Global table
 * Makes table accessible with low latency in multiple regions
 * There is 2 way replication between two global tables in different zones. 
-* Active active replication 
+* Active active replication (Keeping two or more live databases in sync with each other and for high availability)
+
+### Redshift 
+* Redshift is a PostgreSQL, but is not used for OLTP. 
+* It's OLAP - only analytics processing (analytics and data warehousing)
+* Load data once every hour, not every second 
+* 10x better performance than other data warehouses, scale to PB of data
+* Columnar storage of data (instead of row based)
