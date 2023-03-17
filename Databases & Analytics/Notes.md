@@ -1,5 +1,23 @@
 # Databases 
 
+## Summary 
+
+* Relational DB - Online Transaction Processing: RDS & Aurora (SQL)
+* Differences Multi-AZ, Read replica, multi-region 
+If one data center (i.e. AZ) loses power, we want our applications to automatically fail over to another data center in the same region. This is termed Multi-AZ. But, if we want our applications to fail over to another data center when the entire region is gone, we need multi-region support.
+* In-memory DB: ElastiCache 
+* Key/Value DB: DynamoDB (serverless) & DAX (Cache for DynamoDB)
+* Warehouse - Online Analytics Processing: Redshift (SQL)
+* Hadoop Cluster: EMR (Elastic MapReduce)
+* Athena: Query data on S3 (serverless & SQL)
+* QuickSight: dashboards for data (serverless)
+* DocumentDB: Aurora for MongoDB (JSON NoSQL DB)
+* Amazon QLDB: Financial Transaction Ledger (immutable journal, cryptographically verifiable)
+* Amazon Managed Blockchain: Managed Hyperledger Fabric & Ethereum blockhains
+* Glue Managed ETL (Extract Transform Load) and Data Catalog service for discovering datasets into various databases 
+* Database Migration: DMS
+* Neptune: Graph DB
+
 ## Intro
 
 * Storing data on a drive. E.g. EC2 instance store, S3, EFS, EBS can have limits. 
@@ -85,6 +103,87 @@ The database services could run on EC2 but you must handle yourself the resilien
 ### Redshift 
 * Redshift is a PostgreSQL, but is not used for OLTP. 
 * It's OLAP - only analytics processing (analytics and data warehousing)
-* Load data once every hour, not every second 
+* Load data, e.g. once every hour, not every second 
 * 10x better performance than other data warehouses, scale to PB of data
 * Columnar storage of data (instead of row based)
+* Massively Parallel Query Executed (MPP), high available 
+
+### EMR 
+* Elastic MapReduce 
+* Helps create Hadoop clusters for Big Data to analyze and process vast amount of data 
+* Clusters can be made up of hundreds of EC2 instances. E.g. Apache Spark, HBase, Presto, Flink
+* EMR takes care of provisioning and configuration 
+* Has Auto-scaling and integrated with spot instances 
+* Use cases: data processing, machine learning, web indexing and big data
+
+### Athena 
+* Serverless query service to perform analytics against S3 object
+* Use SQL to query the files
+* Supports CSV, JSON, ORC, Avro, and Parquet
+* User loads data into S3 bucket, AWS Athena will query and analyze the data 
+* Amazon QuickSight can be used to get reporting and dashboard from Athena
+* $5.0 per TB of data scanned
+* "Analyze data in S3 using serverless SQL, think Athena" 
+
+### QuickSight 
+* Serverless machine learning powered business intelligence service to create interactive dashboards
+* Fast, automatically scaling, embed-able with per-session pricing#
+* Can run on top of RDS DB, Aurora, Athena, RedShift, S3 
+* Use cases:
+1. Business analytics
+2. Visualizations 
+3. Ad-hoc analysis
+4. Get business insights using data
+
+### DocumentDB 
+* Aurora is an "AWS implementation" of PostgreSQL/ MySQL
+* DocumentDB is the same for MongoDB 
+* MongoDB is used to store, query and index JSON data 
+* Similar deployment concepts as Aurora (Fully managed, highly available, with replication across 3 AZ)
+* DocumentDB storage automatically grows in increments of 10GB up to 64TB
+* Automatically scales to workloads with millions of requests per seconds
+
+### Neptune 
+* Fully managed graph database
+* Popular graph dataset would be a social network 
+1. Users have friends 
+2. Posts have comments 
+3. Comments have likes from users
+4. Users share and like posts
+* Highly available across 3 AZ, with up to 15 read replicas 
+* Build and run applications working with highly connected datasets - optimized for these complex and hard queries
+* Can store up to billions of relations and query the graph with milliseconds latency
+* Great for knowledge graphs (Wikipedia), fraud detection, recommendation engines and social networking
+
+### QLDB 
+* QLDB stands for Quantum Ledger Database 
+* A ledger is a book recording financial transactions
+* Fully managed, serverless, high available, replication across 3 AZ
+* Used to review history of all the changes made to application data over time 
+* Immutable system: no entry can be removed or modified, cryptographically verifiable
+* 2-3x better performance than common ledger blockchain frameworks, manipulate data using SQL
+
+### Amazon Managed Blockchain
+* Blockchain makes it possible to build applications where multiple parties can execute transactions without the need for a trusted central authority
+* Is a managed service to
+1. Join public blockchain networks
+2. Create own scalable private blockchain network
+3. Compatible with Hyperledger Fabric and Ethereum
+* No decentralized component, in accordance with financial regulation rules
+
+### Glue 
+* **Managed extract, transform and load ETL service**
+* When you have datasets that are not in the right form for analytics. 
+* ETL service is used to prepare and transform the service 
+* With glue, it's a fully serverless service
+* E.g. Glue ETL extracts data from S3 or RDS and glue script is written to transform the data and the data is loaded into redshift to do analytics. 
+* Glue data catalog is a catalog of datasets in the AWS infra and the glue catalog will have a reference of everything, the column name, field names, field types, etc and services like Athena or Redshift can be used to discover the datasets and build the proper schema
+
+### DMS 
+* Database Migration Service 
+An EC2 instance running DMS can extract data from a source DB and insert the data into a target DB
+* Quick and secure migrate database to AWS, resilient and self healing
+* The source database remains available during the migration
+* Supports: 
+1. Homogeneous migration: Oracle to oracle 
+2. Heterogenous migration: MS SQL to Aurora 
