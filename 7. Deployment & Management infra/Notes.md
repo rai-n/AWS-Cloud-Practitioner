@@ -25,4 +25,4 @@
 * Define cloud infrastructure using familiar language like JS/TS, Python, Java, etc. 
 * Code is compiled into Cloud Formation template (YAML OR JSON)
 * Can deploy infrastructure and application runtime together
-1. Good for lambda fuunctions and docker containers in ECS/ EKS
+1. Good for lambda functions and docker containers in ECS/ EKS
