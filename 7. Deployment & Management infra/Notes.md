@@ -119,7 +119,7 @@
 1. EC2 instance or on-premise server has an SSM agent which is connected to the Session Manager service and executes command on it 
 * Supports Linux, macOS and Windows
 * Send session log data to S3 or CloudWatch logs
-// continue later
+// Go over this again
 
 ## OpsWorks
 * OpsWorks was made to get a managed "Chef" and "Puppet" service for server configuration automatically, or repetitive actions in the cloud
