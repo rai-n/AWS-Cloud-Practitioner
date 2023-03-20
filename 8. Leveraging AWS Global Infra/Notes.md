@@ -19,5 +19,7 @@
 3. search.google.com => www.google.com == CNAME (hostname to hostname)
 4. example.com => AWS resource == Alias (E.g. ELB, CloudFront, S3, RDS, etc)
 * Routing policies: 
-1. Simple routing policy (no health check), url => ip
+1. Simple routing policy (no health check - load balancing), url => ip
 2. Weighted routing policy (can use health checks, weights associated with each compute resource. E.g. 70 weight, 20 weight 10 weight respectively)
+3. Latency routing policy - users will be rerouted to their closest geographical server to minimize latency between users and servers
+4. Failover routing policy - (disaster recovery) - DNS will do health check on primary instance and if it fails it routes to failover instance
