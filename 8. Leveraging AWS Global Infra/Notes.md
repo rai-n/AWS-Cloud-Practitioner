@@ -9,3 +9,15 @@
 1. Region: For deploying application and infrastructure
 2. Availability zone: Made up of multiple data centers
 3. Edge locations: for content delivery as close to users as possible
+
+## Route 53 
+* Managed DNS (Domain name system)
+* Collection of rules and records which helps client understand how to reach a server through URLs
+* Typical types of records:
+1. 12.34.56.78 == A record (IPv4)
+2. 2001:0db985...:0000:0000 ...  == AAAA (IPv6)
+3. search.google.com => www.google.com == CNAME (hostname to hostname)
+4. example.com => AWS resource == Alias (E.g. ELB, CloudFront, S3, RDS, etc)
+* Routing policies: 
+1. Simple routing policy (no health check), url => ip
+2. Weighted routing policy (can use health checks, weights associated with each compute resource. E.g. 70 weight, 20 weight 10 weight respectively)
