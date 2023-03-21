@@ -38,3 +38,12 @@
 * Each subscriber to the topic will get all the messages
 * Teach topic can have up to 12,500,000 subs per topic, 100,000 topics limit for each account
 * Subscribers an be SQS, Lambda, Kinesis Data Firehose, Emails, SMS & Mobile notifications, HTTP endpoints, etc.
+
+## MQ - Re read to understand more
+* SQS, SNS are cloud native services: proprietary protocols from AWS
+* Traditional applications running on-premises may use open protocols such as MQTT, AMQP, STOMP, Openwire, WSS
+* When migrating to cloud, instead of re-engineering the application to use SQS and SNS, we can use Amazon MQ
+* Amazon MQ is a manged message broker service for: RabbitMQ and ActiveMQ
+* Amazon MQ doesn't scale as much SQS/ SNS
+* Amazon MQ runs on servers, can run in Multi-AZ with failover
+* Amazon MQ has both queue feature (~SQS) and topic features (~SNS)
