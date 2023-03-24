@@ -78,7 +78,12 @@
 2. Can use Direct Connect (DX) -> Establish a physical connection between on-premises and AWS. The connection is private, secure and fast. Goes over a private network. Have to get a direct connect between the on-premise and AWS partner and takes at least a month to establish
 * For site to site VPN, you must use a Customer Gateway (CGW). AWS must use a virtual private gateway provisioned.
 
-## AWS Client VPN
+## Client VPN
 * Connect from computer using OpenVPN to your private network in AWS and on-premises
 * Allow you to connect to EC2 instances over a private IP
 * Establish VPN connection over the public internet. Can use Site to Site VPN to connect to on-premise data center
+
+## Transit gateway
+* For having a transitive peering between thousands of VPC and on-premises, hub-and-spoke (star) connection
+* One single gateway to provide this functionality 
+* Works with direct connect gateway, vpn connections
