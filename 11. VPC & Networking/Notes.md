@@ -87,3 +87,12 @@
 * For having a transitive peering between thousands of VPC and on-premises, hub-and-spoke (star) connection
 * One single gateway to provide this functionality 
 * Works with direct connect gateway, vpn connections
+
+# Summary 
+VPC Endpoints: Provides private access to AWS services within a VPC 
+PrivateLink: Privately connect to a service in a 3rd party VPC 
+VPC Flow Logs: network traffic logs 
+Site to Site VPN: VPN over public internet between on-premises DC and AWS 
+Client VPN: OpenVPN connection from your computer into the VPC 
+Direct Connect: direct private connection to AWS 
+Transit Gateway: Connect thousands of VPC and on-premises networks together
