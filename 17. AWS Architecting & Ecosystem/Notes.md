@@ -124,3 +124,90 @@ AWS:
 * EC2 has many instance types, but choosing the most powerful instance type isn't the best choice, as the cloud is elastic
 * Right sizing is the process of matching instance type and sizes to your workload performance and capacity requirements at the lowest possible cost
 * Scaling up is easy so always start small
+* It's also the process of looking at deployed instances and identifying opportunities to eliminate or downsize without compromising capacity or other requirements, which results in lower costs
+* Important to Right Size 
+1. Before a Cloud Migration to figure out cheapest possible migration to AWS
+2. continuously after the cloud onboarding process. e.g. once a month
+3. CloudWatch, Cost Explorer, Trusted Advisor, 3rd party tools help to figure out needs
+
+## AWS Ecosystem - Free resources
+* Blogs 
+* Forums
+* Whitepapers & Guides e.g. Well-Architected framework
+* Automated, gold-standard deployments in the AWS cloud
+1. Build your production environment quickly with templates
+2. Leverages CloudFormation
+* AWS Solutions
+1. Deploy Vetted solutions on AWS 
+2. AWS Landing zone: secure, multi-account environment
+3. Replaced by AWS Control Tower
+* AWS Support
+1. Developer: Business hour email access to Cloud Support associates, general guidance < 24 hrs, system impaired < 12 hours
+2. Business: 24x7 phone, email and chat access to Cloud Support Engineers, Production system impaired < 4 hours, production system down < 1 hour
+3. Enterprise: Access to Technical Account Manager (TAM), concierge support team for billing and account best practices, business critical system down: < 15 minutes
+
+## AWS Marketplace
+* Digital catalog with 1000s of software listings from 3rd party vendors
+* e.g. Custom AMI with OS, firewalls and solutions
+* CloudFormation templates
+* Software as a Service
+* Buy containers
+* Marketplace payments are gone through AWS bill
+
+## AWS Training
+* AWS Digital (online) and classroom training 
+* AWS Private training for organizations
+* Training and certification for U.S Government
+* T & C for Enterprise 
+* AWS Academy: help unis teach AWS
+* Online courses
+
+## AWS Professional Services & Partner Network
+* Global network
+* Work alongside your team and chosen APN (AWS Partner Network)
+* APN Technology Partners: providing hardware, connectivity and software
+* APN Consulting Partners: professional services form to help build on AWS
+* APN Training Partners: find who can help you learn AWS
+* AWS Competency Program: AWS Competencies are granted to APN Partners who have demonstrated technical proficiency and proven customer success in specialized solution areas
+* AWS Navigate Program: help Partners become better Partners
+
+## AWS Knowledge Center
+* Contains the most frequent & common questions and requests
+
+## AWS IQ 
+* Quickly find professionals help you for your AWS projects
+* Engage and pay AWS Certified 3rd party experts for on-demand project work
+* Video-conferencing, contract management, secure collaboration, integrated billing
+* For customers:
+1. Submit request with project description
+2. Review responses and connect to experts with requirements and timeline
+3. Select expert based on rate, experience, etc
+4. Work securely, give expert access to your AWS account
+5. Pay per milestone, charges added into your AWS Bill
+* For experts:
+1. Create profile with photo, bio, certs
+2. Connect with customers
+3. Start a proposal with work description, price, milestones
+4. Work securely, get appropriate access to customer's AWS account
+5. Get paid, request payment after milestones are met
+
+## AWS re:Post 
+* AWS managed Q&A forum service offering crowd sourced, expert reviewed answers to technical questions about AWS that replaces the original AWS forums
+* AWS Free Tier
+* Members can get reputation points from participating
+* Questions from AWS Premium Support customers without response from community are passed on to AWS Support engineers
+* AWS re:Post is not intended for questions that are time-sensitive or involve any proprietary info
+
+## AWS Managed Services (AMS)
+* Team of people who provide infra and app support on AWS
+* AMS offers experts who manage and operate your infra for security, reliability and availability
+* Helps organizations offload routine management tasks and focus on their business objectives
+* Fully managed service, so AWS handles common activities such as change requests, monitoring, patch management, security and backups services
+* Implements best practices and maintains your infra to reduce operational overhead and risk
+* AMS business hours are 24/365
+
+1. Enable. Create a baseline governance and control model using inputs from people, process and tool sets
+2. Sustain, build or migrate. Determine the fastest and most efficient way to integrate, develop and migrate your workloads
+3. Operate. Active operational outcomes, scale globally and have observability, compliance and financial management
+* You have to get in touch with AWS sales for this
+* Benefits: Improved security, focus on automation, stronger compliance, reduced operating costs, simplified management, frictionless innovation
