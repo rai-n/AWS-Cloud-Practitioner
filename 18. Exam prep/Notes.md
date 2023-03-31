@@ -41,3 +41,5 @@
 * AWS Cognito - Cognito lets you add user auth with form or social identity provider. 
 * AWS identity and access management - IAM enables you to securely control access to AWS services and resources for users. You can create and manage users and groups and use permissions to allow or deny access to resources
 * AWS CLI is a unified tool to mange AWS services. With one tool to download and configure, you can control multiple AWS services from the command line and automate them through scripts
+* AWS Inspector is an automated vulnerability management service that continually scans AWS workloads for software vulnerabilities and unintended network exposure. Inspector provides security assessments of your application settings and configurations on your EC2 instances while GuardDuty helps with analyzing your entire AWS environment for threats. Also checks running OS for known vulnerabilities
+* AWS Config, all configs for a region is shown. You can track configuration changes for services. You can apply predefined rules by custom rules defined through AWS Lambda for checking compliance with the rules
