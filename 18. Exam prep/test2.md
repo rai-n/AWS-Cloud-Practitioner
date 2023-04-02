@@ -23,3 +23,8 @@
 * Compute optimizer recommends optimal AWS resources for workload to reduce cost and improve performance by using ML to analyze historical metrics. Helps fit the resource provisioning to not under or over provision and pick optimal config for EC2 instances, EBS volumes and Lambda functions.
 * How to remove an AWS account from AWS Organizations -> The AWS account must be able to operate as a standalone account. Only then it can be removed from AWS Organizations
 * AWS support plan for guidance with setting up config, troubleshoot of AWS interoperability with 3rd party software. Business, Enterprise
+* AWS API Gateway is a fully managed service that makes it easy for devs to create, publish, maintain, monitor and secure API at any scale. API acts as the front door for apps to access data, business logic or functionality from your backend services. AWS Firewall is used to monitor the HTTP and HTTPs requests that are forwarded to an Amazon API Gateway API. 
+* AWS Shield advanced protects additionally application layer items on level 7 which includes EC2, Elastic load balancing, CloudFront, Route 53 and Global accelerator
+* If u have application hosted in multiple regions and want to improve performance globally, you can:
+1. use global accelerator to route traffic to the closest region
+2. use cloudfront to improve delivery of content by having cached edge location CDN
