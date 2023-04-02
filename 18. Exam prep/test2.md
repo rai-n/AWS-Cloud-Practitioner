@@ -28,3 +28,6 @@
 * If u have application hosted in multiple regions and want to improve performance globally, you can:
 1. use global accelerator to route traffic to the closest region
 2. use cloudfront to improve delivery of content by having cached edge location CDN
+* AWS guard duty continuously monitors AWS accounts, instances, container workloads, user dbs, storages for potential threats. Exposes threats quickly using anomaly detection, ML behavioral modeling and threat intelligence from AWS and leading 3rd parties. Automatically remediate using AWS lambda automation
+* Internet gateway allows instances with a public IP to access the internet. NAT gateways allows instances with no public IP to access the internet
+* NAT gateway is an AWS managed NAT service that provides better availability, higher bandwidth and less admin effort. Allows you to connect private subnet instances to AWS services or the internet. Nat gateways help secure instances within your private network by blocking all incoming traffic and allowing all outgoing traffic. Instances in a private subnet with a NAT (Network address translation) can connect to services outside your VPC, but external services cannot initiate a connection with those instances
