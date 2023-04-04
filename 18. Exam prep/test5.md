@@ -1,0 +1,2 @@
+* AWS Budget is useful for making alerts when you exceed or forecasted to exceed desired spending limit. AWS trusted advisor for finding under utilized resources
+* AWS endpoints allow you to private access AWS services using AWS internal network instead of using public internet and therefore without imposing availability risks or bandwidth constraints on network traffic
